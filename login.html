@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="web_standard" name="shell-type"/>
+  <title>Tecno Streaming - Acceso Búnker | Portal de Clientes</title>
+  
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&family=Outfit:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/>
+
+  <style>
+    @layer base {
+      html, body { margin:0; padding:0; }
+      body { overscroll-behavior:none; }
+      main>:first-child { margin-top:0!important; }
+      main>:last-child { margin-bottom:0!important; }
+    }
+    ::-webkit-scrollbar { display:none; }
+  </style>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "tertiary": "#00dbe9",
+            "on-secondary-fixed-variant": "#6600b7",
+            "surface-tint": "#ffb1c4",
+            "primary-fixed-dim": "#ffb1c4",
+            "outline": "#ac878f",
+            "on-surface-variant": "#e5bcc5",
+            "tertiary-fixed": "#7df4ff",
+            "primary-container": "#ff4a8d",
+            "primary": "#ffb1c4",
+            "on-tertiary-fixed-variant": "#004f54",
+            "on-primary-fixed-variant": "#8f0044",
+            "inverse-primary": "#ba005b",
+            "inverse-on-surface": "#2e303b",
+            "on-tertiary-fixed": "#002022",
+            "surface": "#11131d",
+            "surface-container-high": "#282934",
+            "secondary-fixed-dim": "#dbb8ff",
+            "tertiary-fixed-dim": "#00dbe9",
+            "on-secondary-container": "#d0a6ff",
+            "inverse-surface": "#e1e1f0",
+            "background": "#11131d",
+            "surface-variant": "#32343f",
+            "on-tertiary-container": "#002f33",
+            "on-surface": "#e1e1f0",
+            "surface-container-highest": "#32343f",
+            "on-primary": "#65002e",
+            "on-tertiary": "#00363a",
+            "on-primary-fixed": "#3f001a",
+            "tertiary-container": "#00a0aa",
+            "on-error-container": "#ffdad6",
+            "on-secondary-fixed": "#2b0052",
+            "surface-container": "#1d1f2a",
+            "surface-bright": "#373844",
+            "on-secondary": "#470083",
+            "surface-dim": "#11131d",
+            "outline-variant": "#5c3f46",
+            "surface-container-lowest": "#0c0e18",
+            "error-container": "#93000a",
+            "secondary-fixed": "#efdbff",
+            "secondary": "#dbb8ff",
+            "on-primary-container": "#590028",
+            "on-error": "#690005",
+            "surface-container-low": "#191b26",
+            "error": "#ffb4ab",
+            "primary-fixed": "#ffd9e1",
+            "on-background": "#e1e1f0",
+            "secondary-container": "#6807ba"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "space-xs": "0.25rem",
+            "margin-sm": "1rem",
+            "margin": "2rem",
+            "space-md": "1rem",
+            "gutter": "1.5rem",
+            "gutter-sm": "1rem",
+            "space-xl": "2.5rem",
+            "space-lg": "1.5rem",
+            "space-sm": "0.5rem"
+          },
+          fontFamily: {
+            "label-lg": ["Inter"],
+            "headline-sm": ["Outfit"],
+            "label-md": ["Inter"],
+            "headline-xl-mobile": ["Outfit"],
+            "headline-xl": ["Outfit"],
+            "body-md": ["Plus Jakarta Sans"],
+            "headline-lg": ["Outfit"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "label-xs": ["Inter"],
+            "body-sm": ["Plus Jakarta Sans"]
+          },
+          fontSize: {
+            "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.02em", fontWeight: "600" }],
+            "headline-sm": ["20px", { lineHeight: "28px", fontWeight: "600" }],
+            "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "500" }],
+            "headline-xl-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700" }],
+            "headline-xl": ["40px", { lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }],
+            "headline-lg": ["28px", { lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "600" }],
+            "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+            "label-xs": ["11px", { lineHeight: "14px", letterSpacing: "0.06em", fontWeight: "600" }],
+            "body-sm": ["12px", { lineHeight: "18px", fontWeight: "400" }]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-background font-body-md text-on-surface antialiased min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="fixed top-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]">
+    <div class="h-16 w-full px-gutter flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-space-md">
+        <img alt="Tecno Streaming Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtg5ovl-O18HdoPE2mUMcv6X1yyqJFo7A8x-kuc4vOYwbKSey3LdRvUG6N_X2YJZa3hHZEl_HnecKF37w6v15Y1Hkx0bB2AW3LfEyuFkTlhW2gGHlC2jZNBgCjqd4oCxH8BnkW8kxnUIb1L1WlBW230xMf9glOvx2J5K69WSKN8MiHQRUXC6oNcccNHkqum7yJBM-tAnC4IIwsFun3KYb8feXpfPbK_5ErBr4ugeA"/>
+        <div class="flex flex-col">
+          <span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">Tecno Streaming</span>
+          <span class="font-label-xs text-label-xs text-tertiary tracking-wide hidden sm:inline-block">Tu búnker de entretenimiento digital</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-space-sm">
+        <a class="px-space-md py-space-xs rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" href="index.html#catalogo">Comprar Cuentas</a>
+        <a aria-current="page" class="px-space-md py-space-xs transition-all bg-surface-container-high text-on-surface font-label-lg text-label-lg rounded-lg shadow-[0_0_12px_rgba(255,0,127,0.25)]" href="login.html">Acceso Búnker</a>
+        <a class="px-space-md py-space-xs rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" href="catalogo.html">Catálogo VIP</a>
+        <a class="px-space-md py-space-xs rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" href="index.html#garantia">Estado del Sistema</a>
+        <a class="px-space-md py-space-xs rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" href="index.html#faq">Soporte Criptográfico</a>
+      </nav>
+
+      <div class="flex items-center gap-space-md">
+        <div class="hidden sm:flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container-low">
+          <span class="inline-block w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+          <span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">SERVIDORES EN LÍNEA</span>
+        </div>
+        <div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container text-on-surface-variant">
+          <span class="material-symbols-outlined text-[16px] text-tertiary">language</span>
+          <span class="font-label-md text-label-md font-semibold text-on-surface">ES</span>
+        </div>
+        <a href="login.html" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+          <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="w-full pt-16 flex-1 bg-background relative">
+    <div class="flex flex-col w-full relative overflow-hidden py-space-xl px-gutter items-center justify-center">
+      <!-- Ambient Atmospheric Depth & Cyber Bunker Radial Orbs -->
+      <div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-secondary-container/20 blur-[130px] pointer-events-none"></div>
+      <div class="absolute top-1/3 -right-24 w-[28rem] h-[28rem] rounded-full bg-primary-container/15 blur-[150px] pointer-events-none"></div>
+      <div class="absolute -bottom-24 left-1/4 w-[32rem] h-[32rem] rounded-full bg-tertiary-container/10 blur-[160px] pointer-events-none"></div>
+      
+      <!-- Decorative Subtle Grid & Scanning HUD Elements -->
+      <div class="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#e1e1f0_1px,transparent_1px)] [background-size:24px_24px]"></div>
+
+      <div class="w-full max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center relative z-10">
+        
+        <!-- Left Column: High-Tech Security Vault Context & Streaming Previews -->
+        <div class="hidden lg:flex lg:col-span-6 flex-col justify-between h-full py-space-md pr-space-lg space-y-space-xl">
+          <div class="space-y-space-md">
+            <div class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container-high/60 backdrop-blur-md shadow-sm">
+              <span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+              <span class="font-label-xs text-label-xs uppercase tracking-wider text-tertiary">Protocolo Cuántico Activo</span>
+              <span class="text-on-surface-variant font-label-xs text-label-xs">• 99.9% Disponibilidad Garantizada</span>
+            </div>
+            <div class="space-y-space-xs">
+              <p class="font-label-md text-label-md tracking-wider uppercase text-on-surface-variant">Acceso de Alta Fidelidad</p>
+              <h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight leading-tight">
+                Transmisiones Ultra HD blindadas dentro del <span class="text-primary underline decoration-primary-container decoration-2 underline-offset-4">búnker digital</span>.
+              </h1>
+            </div>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+              Servidores federados con baja latencia, catalogación privada y desencriptación instantánea para miembros registrados.
+            </p>
+          </div>
+
+          <!-- Feature Entertainment Holographic Feed Card -->
+          <div class="relative rounded-xl overflow-hidden bg-surface-container-low shadow-xl">
+            <div class="h-44 w-full bg-cover bg-center relative" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBUpLfFb3n-7GzCm1N8CDmOk6LEQii_0nCAslXshbzY_irVaLqj7y2cmwKSlakr6sOasZenD0F2ggKM6QjkfcFf5nDtVfClSai-A-HtRMKG3Sr1o3VA8AOt7S1c6tHb5xut1L2JffPAEDGU6Vd3P1bXLcbARNd8S73qCkinj7iCT-ntFhHQJVTQ_GtYTvAxjU_LedWPr2sJTn-ERRZkDdJikTGTGGU-BISixU6enfM')">
+              <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/40 to-transparent"></div>
+              <div class="absolute top-space-md left-space-md flex gap-space-xs">
+                <span class="px-space-xs py-[2px] rounded bg-primary-container text-on-primary font-label-xs text-label-xs font-semibold shadow-sm">4K HDR</span>
+                <span class="px-space-xs py-[2px] rounded bg-surface-container-lowest/80 backdrop-blur-sm text-tertiary font-label-xs text-label-xs">Audio Dolby Atmos</span>
+              </div>
+            </div>
+            <div class="p-space-md flex items-center justify-between">
+              <div class="space-y-1">
+                <span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wide">Canal Exclusivo #09</span>
+                <p class="font-headline-sm text-headline-sm text-on-surface truncate">Archivo Ciberpunk: Bóveda Roja en Vivo</p>
+              </div>
+              <div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container text-tertiary">
+                <span class="material-symbols-outlined text-[16px]">lock_open</span>
+                <span class="font-label-md text-label-md">Cifrado</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Live Bunker Telemetry Badges -->
+          <div class="grid grid-cols-2 gap-space-md">
+            <div class="p-space-md rounded-xl bg-surface-container-low/70 backdrop-blur-md shadow-sm">
+              <div class="flex items-center gap-space-xs text-tertiary mb-1">
+                <span class="material-symbols-outlined text-[18px]">verified_user</span>
+                <span class="font-label-md text-label-md uppercase font-semibold">Conexión Segura</span>
+              </div>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">Encriptación AES-256 bits punto a punto.</p>
+            </div>
+            <div class="p-space-md rounded-xl bg-surface-container-low/70 backdrop-blur-md shadow-sm">
+              <div class="flex items-center gap-space-xs text-secondary mb-1">
+                <span class="material-symbols-outlined text-[18px]">speed</span>
+                <span class="font-label-md text-label-md uppercase font-semibold">Latencia Cero</span>
+              </div>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">Nodos distribuidos para streaming fluido.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Login Portal Card -->
+        <div class="lg:col-span-6 flex justify-center w-full">
+          <div class="w-full max-w-[480px] relative rounded-xl bg-surface-container/90 backdrop-blur-2xl shadow-2xl p-space-lg sm:p-space-xl overflow-hidden">
+            <!-- Specular Highlight Line at Card Top -->
+            <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-80"></div>
+            <div class="absolute -top-12 left-1/2 -translate-x-1/2 w-48 h-12 bg-primary/20 blur-xl pointer-events-none"></div>
+
+            <!-- Bunker Header & Branding -->
+            <div class="text-center space-y-space-xs mb-space-lg">
+              <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-surface-container-high text-primary mb-space-xs shadow-md shadow-primary-container/20">
+                <span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">cell_tower</span>
+              </div>
+              <h2 class="font-headline-xl text-headline-xl text-primary font-bold tracking-tight drop-shadow-[0_0_16px_rgba(255,74,141,0.45)]">
+                Tecno Streaming
+              </h2>
+              <p class="font-body-md text-body-md text-on-surface-variant tracking-wide">
+                Tu búnker de entretenimiento digital
+              </p>
+              <div class="pt-space-md">
+                <h3 class="font-headline-lg text-headline-lg text-on-surface">
+                  Bienvenido de Nuevo
+                </h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                  Ingresa tus credenciales para acceder a tus cuentas activas
+                </p>
+              </div>
+            </div>
+
+            <!-- Authentication Form -->
+            <form class="space-y-space-md" onsubmit="event.preventDefault(); alert('¡Credenciales validadas con éxito! Redirigiendo a tu bóveda personal...'); window.location.href='catalogo.html';">
+              <!-- Input 1: Correo o nombre de usuario -->
+              <div class="space-y-1">
+                <label class="block font-label-md text-label-md text-on-surface-variant font-medium" for="username">
+                  Correo o nombre de usuario
+                </label>
+                <div class="relative flex items-center rounded-lg bg-surface-container-lowest/90 transition-all focus-within:shadow-[0_0_16px_rgba(255,74,141,0.35)]">
+                  <span class="material-symbols-outlined absolute left-space-md text-outline text-[20px] pointer-events-none">person</span>
+                  <input autocomplete="username" class="w-full bg-transparent pl-11 pr-space-md py-3 text-on-surface placeholder:text-outline-variant font-body-md text-body-md focus:outline-none rounded-lg" id="username" placeholder="usuario@bunker.stream o alias" required="" type="text"/>
+                </div>
+              </div>
+
+              <!-- Input 2: Contraseña with Toggle Show/Hide -->
+              <div class="space-y-1">
+                <div class="flex items-center justify-between">
+                  <label class="block font-label-md text-label-md text-on-surface-variant font-medium" for="password">
+                    Contraseña
+                  </label>
+                </div>
+                <div class="relative flex items-center rounded-lg bg-surface-container-lowest/90 transition-all focus-within:shadow-[0_0_16px_rgba(255,74,141,0.35)]">
+                  <span class="material-symbols-outlined absolute left-space-md text-outline text-[20px] pointer-events-none">lock</span>
+                  <input autocomplete="current-password" class="w-full bg-transparent pl-11 pr-11 py-3 text-on-surface placeholder:text-outline-variant font-body-md text-body-md focus:outline-none rounded-lg" id="password" placeholder="••••••••••••" required="" type="password"/>
+                  <button aria-label="Alternar visibilidad de contraseña" class="absolute right-space-md text-outline hover:text-primary transition-colors flex items-center justify-center p-1 focus:outline-none" id="togglePasswordBtn" type="button">
+                    <span class="material-symbols-outlined text-[20px]" id="toggleIcon">visibility</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Primary CTA Button -->
+              <div class="pt-space-xs">
+                <button class="w-full py-3.5 px-space-md rounded-lg bg-gradient-to-r from-primary-container via-inverse-primary to-primary-container hover:brightness-110 active:scale-[0.99] text-on-primary font-label-lg text-label-lg font-bold flex items-center justify-center gap-space-xs transition-all shadow-[0_4px_24px_rgba(255,74,141,0.4)]" type="submit">
+                  <span class="material-symbols-outlined text-[20px]">login</span>
+                  <span>Entrar al Sistema</span>
+                </button>
+              </div>
+
+              <!-- Secondary Links -->
+              <div class="space-y-space-sm pt-space-xs text-center">
+                <div>
+                  <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="index.html#faq">
+                    ¿Olvidaste tus credenciales?
+                  </a>
+                </div>
+                <div class="pt-1">
+                  <span class="font-body-sm text-body-sm text-on-surface-variant">¿No tienes cuenta activa?</span>
+                  <a class="font-label-md text-label-md font-semibold text-primary hover:text-primary-fixed hover:underline ml-1 transition-all" href="index.html#catalogo">
+                    Compra tu acceso aquí
+                  </a>
+                </div>
+              </div>
+            </form>
+
+            <!-- Divider with Ambient Telemetry Icon -->
+            <div class="my-space-lg flex items-center gap-space-sm opacity-50">
+              <div class="h-px bg-surface-container-highest flex-1"></div>
+              <span class="material-symbols-outlined text-[16px] text-tertiary">security</span>
+              <div class="h-px bg-surface-container-highest flex-1"></div>
+            </div>
+
+            <!-- Security Pill Status -->
+            <div class="p-space-sm rounded-lg bg-surface-container-lowest flex items-center justify-between">
+              <div class="flex items-center gap-space-xs">
+                <span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                <span class="font-label-xs text-label-xs text-on-surface-variant">Cifrado de Terminal</span>
+              </div>
+              <span class="font-label-xs text-label-xs text-tertiary font-mono tracking-wider">SSL-256</span>
+            </div>
+
+            <!-- Copyright Notice -->
+            <div class="mt-space-lg text-center">
+              <p class="font-label-xs text-label-xs text-on-surface-variant/80">
+                © 2026 HN Codenest Solution - Todos los derechos reservados
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <script>
+      (function initAuthInteractions() {
+        const passwordInput = document.getElementById('password');
+        const toggleBtn = document.getElementById('togglePasswordBtn');
+        const toggleIcon = document.getElementById('toggleIcon');
+
+        if (toggleBtn && passwordInput && toggleIcon) {
+          toggleBtn.addEventListener('click', function() {
+            const isPassword = passwordInput.getAttribute('type') === 'password';
+            passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
+            toggleIcon.textContent = isPassword ? 'visibility_off' : 'visibility';
+          });
+        }
+      })();
+    </script>
+  </main>
+
+  <footer class="w-full bg-surface-container-lowest py-space-lg">
+    <div class="w-full px-gutter flex flex-col md:flex-row items-center justify-between gap-space-md">
+      <div class="flex flex-col sm:flex-row items-center gap-space-sm text-center sm:text-left">
+        <p class="font-body-sm text-body-sm text-on-surface-variant">© 2026 HN Codenest Solution - Todos los derechos reservados</p>
+        <span class="hidden sm:inline text-outline-variant">•</span>
+        <span class="font-label-xs text-label-xs text-tertiary">Encriptación AES-256 Activa</span>
+      </div>
+      <nav class="flex items-center flex-wrap justify-center gap-space-md">
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-tertiary transition-colors" href="index.html#garantia">Términos de Servicio</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-tertiary transition-colors" href="index.html#garantia">Privacidad Blindada</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-tertiary transition-colors" href="index.html#faq">Centro de Ayuda</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-tertiary transition-colors" href="index.html#catalogo">Comprar Cuentas</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>

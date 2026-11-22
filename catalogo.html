@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="web_standard" name="shell-type"/>
+  <title>Tecno Streaming - Catálogo VIP | Bóveda de Contenido</title>
+
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&family=Outfit:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/>
+
+  <style>
+    @layer base {
+      html, body { margin:0; padding:0; }
+      body { overscroll-behavior:none; }
+      main>:first-child { margin-top:0!important; }
+      main>:last-child { margin-bottom:0!important; }
+    }
+    ::-webkit-scrollbar { display:none; }
+  </style>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "tertiary": "#00dbe9",
+            "on-secondary-fixed-variant": "#6600b7",
+            "surface-tint": "#ffb1c4",
+            "primary-fixed-dim": "#ffb1c4",
+            "outline": "#ac878f",
+            "on-surface-variant": "#e5bcc5",
+            "tertiary-fixed": "#7df4ff",
+            "primary-container": "#ff4a8d",
+            "primary": "#ffb1c4",
+            "on-tertiary-fixed-variant": "#004f54",
+            "on-primary-fixed-variant": "#8f0044",
+            "inverse-primary": "#ba005b",
+            "inverse-on-surface": "#2e303b",
+            "on-tertiary-fixed": "#002022",
+            "surface": "#11131d",
+            "surface-container-high": "#282934",
+            "secondary-fixed-dim": "#dbb8ff",
+            "tertiary-fixed-dim": "#00dbe9",
+            "on-secondary-container": "d0a6ff",
+            "inverse-surface": "#e1e1f0",
+            "background": "#11131d",
+            "surface-variant": "#32343f",
+            "on-tertiary-container": "#002f33",
+            "on-surface": "#e1e1f0",
+            "surface-container-highest": "#32343f",
+            "on-primary": "#65002e",
+            "on-tertiary": "#00363a",
+            "on-primary-fixed": "#3f001a",
+            "tertiary-container": "#00a0aa",
+            "on-error-container": "#ffdad6",
+            "on-secondary-fixed": "#2b0052",
+            "surface-container": "#1d1f2a",
+            "surface-bright": "#373844",
+            "on-secondary": "#470083",
+            "surface-dim": "#11131d",
+            "outline-variant": "#5c3f46",
+            "surface-container-lowest": "#0c0e18",
+            "error-container": "#93000a",
+            "secondary-fixed": "#efdbff",
+            "secondary": "#dbb8ff",
+            "on-primary-container": "#590028",
+            "on-error": "#690005",
+            "surface-container-low": "#191b26",
+            "error": "#ffb4ab",
+            "primary-fixed": "#ffd9e1",
+            "on-background": "#e1e1f0",
+            "secondary-container": "#6807ba"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "space-xs": "0.25rem",
+            "margin-sm": "1rem",
+            "margin": "2rem",
+            "space-md": "1rem",
+            "gutter": "1.5rem",
+            "gutter-sm": "1rem",
+            "space-xl": "2.5rem",
+            "space-lg": "1.5rem",
+            "space-sm": "0.5rem"
+          },
+          fontFamily: {
+            "label-lg": ["Inter"],
+            "headline-sm": ["Outfit"],
+            "label-md": ["Inter"],
+            "headline-xl-mobile": ["Outfit"],
+            "headline-xl": ["Outfit"],
+            "body-md": ["Plus Jakarta Sans"],
+            "headline-lg": ["Outfit"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "label-xs": ["Inter"],
+            "body-sm": ["Plus Jakarta Sans"]
+          },
+          fontSize: {
+            "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.02em", fontWeight: "600" }],
+            "headline-sm": ["20px", { lineHeight: "28px", fontWeight: "600" }],
+            "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "500" }],
+            "headline-xl-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700" }],
+            "headline-xl": ["40px", { lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }],
+            "headline-lg": ["28px", { lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "600" }],
+            "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+            "label-xs": ["11px", { lineHeight: "14px", letterSpacing: "0.06em", fontWeight: "600" }],
+            "body-sm": ["12px", { lineHeight: "18px", fontWeight: "400" }]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-background font-body-md text-on-surface antialiased min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="fixed top-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]">
+    <div class="h-16 w-full px-gutter flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-space-md">
+        <img alt="Tecno Streaming Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtg5ovl-O18HdoPE2mUMcv6X1yyqJFo7A8x-kuc4vOYwbKSey3LdRvUG6N_X2YJZa3hHZEl_HnecKF37w6v15Y1Hkx0bB2AW3LfEyuFkTlhW2gGHlC2jZNBgCjqd4oCxH8BnkW8kxnUIb1L1WlBW230xMf9glOvx2J5K69WSKN8MiHQRUXC6oNcccNHkqum7yJBM-tAnC4IIwsFun3KYb8feXpfPbK_5ErBr4ugeA"/>
+        <div class="flex flex-col">
+          <span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">Tecno Streaming</span>
+          <span class="font-label-xs text-label-xs text-tertiary tracking-wide hidden sm:inline-block">Tu búnker de entretenimiento digital</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-space-sm">
+        <a class="px-space-md py-space-xs rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" href="index.html#catalogo">Comprar Cuentas</a>
+        <a class="px-space-md py-space-xs rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" href="login.html">Acceso Búnker</a>
+        <a aria-current="page" class="px-space-md py-space-xs transition-all bg-surface-container-high text-on-surface font-label-lg text-label-lg rounded-lg shadow-[0_0_12px_rgba(255,0,127,0.25)]" href="catalogo.html">Catálogo VIP</a>
+        <a class="px-space-md py-space-xs rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" href="index.html#garantia">Estado del Sistema</a>
+        <a class="px-space-md py-space-xs rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" href="index.html#faq">Soporte Criptográfico</a>
+      </nav>
+
+      <div class="flex items-center gap-space-md">
+        <div class="hidden sm:flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container-low">
+          <span class="inline-block w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+          <span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Servidores Online</span>
+        </div>
+        <div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container text-on-surface-variant">
+          <span class="material-symbols-outlined text-[16px] text-tertiary">language</span>
+          <span class="font-label-md text-label-md font-semibold text-on-surface">ES</span>
+        </div>
+        <a href="login.html" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+          <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Catalog Content -->
+  <main class="w-full pt-16 flex-1 bg-background relative">
+    <div class="flex flex-col w-full relative pb-margin">
+      <!-- Dynamic Ambient Glows -->
+      <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary-container/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+      <div class="absolute top-96 right-10 w-[500px] h-[500px] bg-secondary-container/15 rounded-full blur-[160px] pointer-events-none -z-10"></div>
+      <div class="absolute bottom-1/3 left-10 w-80 h-80 bg-tertiary/10 rounded-full blur-[130px] pointer-events-none -z-10"></div>
+
+      <!-- 1. CINEMATIC FEATURED HERO SECTION -->
+      <section class="relative w-full overflow-hidden bg-surface-container-lowest">
+        <div class="relative w-full h-[620px] lg:h-[700px]">
+          <!-- Background Cyberpunk Imagery -->
+          <div class="absolute inset-0 bg-cover bg-center w-full h-full transform scale-105 transition-transform duration-1000 ease-out" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAZ0M5HYw4wGuqCnwOWrstheEDaJ-29CKTDfC4bDePo_VsLmX1YLQN4dTMAIAZ6iyASeb9FLCLsR34T2htzdsT3Wxc9oYi1nTE8CCeVkPlKO5ithvNp98Xnii9QOVP7t6FCcf9v0ffkDQsQjzFPn7Lvl9Rma1PeWuV01n1-6CsQiKpce8SRBiNDbmV28hqG9iwVr1x6vAg0E-Fukg_3OdxNceX7Z0MlZOWejB-Nze0')"></div>
+          <!-- Multi-gradient Scrim for Absolute Contrast -->
+          <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/70 to-surface-container-lowest/30"></div>
+          <div class="absolute inset-0 bg-gradient-to-r from-surface-container-lowest via-surface-container-lowest/80 to-transparent"></div>
+          <div class="absolute top-0 inset-x-0 h-24 bg-gradient-to-b from-surface-container-lowest/90 to-transparent"></div>
+
+          <!-- Hero Content Container -->
+          <div class="relative h-full max-w-7xl mx-auto px-gutter flex flex-col justify-end pb-space-xl">
+            <!-- Live & Quality Telemetry Badges -->
+            <div class="flex flex-wrap items-center gap-space-sm mb-space-md">
+              <div class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-primary-container/20 text-primary-container shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+                <span class="font-label-xs text-label-xs uppercase tracking-widest font-semibold">ESTRENO EN VIVO</span>
+              </div>
+              <div class="px-space-sm py-1 rounded bg-surface-container-high/80 backdrop-blur-md text-tertiary font-label-xs text-label-xs tracking-wider flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">hd</span>
+                <span>4K HDR • 60 FPS</span>
+              </div>
+              <div class="px-space-sm py-1 rounded bg-surface-container-high/80 backdrop-blur-md text-secondary font-label-xs text-label-xs tracking-wider hidden sm:flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">surround_sound</span>
+                <span>AUDIO ESPACIAL ATMOS</span>
+              </div>
+              <div class="px-space-sm py-1 rounded bg-surface-container-high/80 backdrop-blur-md text-on-surface-variant font-label-xs text-label-xs tracking-wider hidden md:flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px] text-tertiary">lock</span>
+                <span>AES-256 CONOCIMIENTO CERO</span>
+              </div>
+            </div>
+
+            <!-- Title & Identification -->
+            <div class="max-w-3xl">
+              <span class="font-label-md text-label-md text-tertiary tracking-widest uppercase mb-1 block">Producción Original VIP #091-B</span>
+              <h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight mb-space-md leading-none drop-shadow-md">
+                Ciberpunk 2099: Transmisión en Vivo del Sindicato Neón
+              </h1>
+              <!-- Metadata Ribbon -->
+              <div class="flex items-center gap-space-md text-on-surface-variant mb-space-md font-label-md text-label-md flex-wrap">
+                <div class="flex items-center gap-1 text-primary">
+                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="font-semibold text-on-surface">9.9 / 10</span>
+                  <span class="text-on-surface-variant text-[11px]">(Nodo Crítico)</span>
+                </div>
+                <span class="text-outline-variant">•</span>
+                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">schedule</span> 2h 15m</span>
+                <span class="text-outline-variant">•</span>
+                <span class="px-space-xs py-0.5 rounded bg-surface-container text-tertiary font-label-xs text-label-xs">CIENCIA FICCIÓN / SUSPENSE TECNOLÓGICO</span>
+                <span class="text-outline-variant">•</span>
+                <span class="text-secondary font-semibold">Transmisión Sin Cortes VIP</span>
+              </div>
+
+              <!-- Narrative Synopsis -->
+              <p class="font-body-lg text-body-lg text-on-surface-variant mb-space-lg line-clamp-3 md:line-clamp-none max-w-2xl drop-shadow">
+                Infiltración en tiempo real en los núcleos de datos de Megacorporación Kenshiro. Los agentes renegados del Búnker Central transmiten la extracción de la I.A. prohibida mediante un enlace cuántico blindado. Acceso estrictamente reservado a terminales autenticadas nivel Omega.
+              </p>
+
+              <!-- Interaction CTAs -->
+              <div class="flex items-center flex-wrap gap-space-md">
+                <a href="index.html#catalogo" class="px-space-xl py-space-md rounded-xl bg-gradient-to-r from-primary-container via-primary-container to-secondary-container text-on-surface font-label-lg text-label-lg font-bold flex items-center gap-space-sm shadow-[0_4px_24px_rgba(255,74,141,0.4)] hover:shadow-[0_4px_32px_rgba(255,74,141,0.65)] hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer">
+                  <span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                  <span>Comprar Cuenta para Ver</span>
+                </a>
+                <button onclick="alert('Guardado en la bóveda de favoritos')" class="px-space-lg py-space-md rounded-xl bg-surface-container-high/90 hover:bg-surface-bright text-on-surface font-label-lg text-label-lg flex items-center gap-space-sm backdrop-blur-md shadow-md transition-all cursor-pointer">
+                  <span class="material-symbols-outlined text-[20px] text-tertiary">bookmark_add</span>
+                  <span>Añadir a mi Búnker</span>
+                </button>
+                <a href="index.html#catalogo" class="px-space-md py-space-md rounded-xl bg-surface-container/60 hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg flex items-center gap-space-xs transition-colors cursor-pointer">
+                  <span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+                  <span class="hidden sm:inline">Ver Tienda</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. SEARCH & VAULT FILTERING SYSTEM -->
+      <section class="max-w-7xl w-full mx-auto px-gutter -mt-8 relative z-20">
+        <div class="bg-surface-container-low/95 backdrop-blur-2xl rounded-2xl p-space-md shadow-[0_16px_40px_rgba(0,0,0,0.6)] flex flex-col gap-space-md">
+          <div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md">
+            <div class="relative flex-1">
+              <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">manage_search</span>
+              <input class="w-full h-12 bg-surface-container-lowest rounded-xl pl-12 pr-28 text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none focus:bg-surface-container focus:shadow-[0_0_20px_rgba(255,74,141,0.25)] transition-all" placeholder="Buscar por título, canal seguro, códec (AV1, HEVC) o identificador de búnker..." type="text"/>
+              <div class="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1 bg-surface-container-high px-2 py-1 rounded text-outline font-label-xs text-label-xs select-none">
+                <span>⌘</span><span>K</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-space-sm self-end lg:self-auto">
+              <span class="font-label-md text-label-md text-on-surface-variant whitespace-nowrap hidden sm:inline">Prioridad:</span>
+              <div class="flex bg-surface-container-lowest p-1 rounded-xl">
+                <button class="px-space-md py-1.5 rounded-lg bg-surface-container-high text-tertiary font-label-md text-label-md shadow-sm">
+                  Más Recientes
+                </button>
+                <button class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors">
+                  Mayor Tasa de Bits (8K/4K)
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-space-xs overflow-x-auto pb-1 scrollbar-none">
+            <button class="px-space-md py-1.5 rounded-full bg-primary-container text-on-surface font-label-md text-label-md whitespace-nowrap shadow-sm">
+              Todos los Nodos
+            </button>
+            <button class="px-space-md py-1.5 rounded-full bg-surface-container-high hover:bg-surface-bright text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap flex items-center gap-1.5 transition-colors">
+              <span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+              Transmisiones en Vivo
+            </button>
+            <button class="px-space-md py-1.5 rounded-full bg-surface-container-high hover:bg-surface-bright text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap transition-colors">
+              Series Exclusivas del Búnker
+            </button>
+            <button class="px-space-md py-1.5 rounded-full bg-surface-container-high hover:bg-surface-bright text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap transition-colors">
+              Archivos Desclasificados
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. MAIN VIP CATALOG ROWS -->
+      <div class="max-w-7xl w-full mx-auto px-gutter mt-space-xl flex flex-col gap-space-xl">
+        
+        <!-- ROW 1: LIVE VAULT FEEDS -->
+        <section class="flex flex-col gap-space-md">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-space-sm">
+              <div class="w-3 h-3 rounded-full bg-primary-container animate-pulse shadow-[0_0_8px_#ff4a8d]"></div>
+              <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Canales Exclusivos en Vivo</h2>
+              <span class="px-space-xs py-0.5 rounded bg-surface-container text-tertiary font-label-xs text-label-xs uppercase">Latencia Ultra-Baja</span>
+            </div>
+            <a class="font-label-md text-label-md text-tertiary hover:text-tertiary-fixed transition-colors flex items-center gap-1" href="index.html#catalogo">
+              <span>Adquirir Acceso Búnker</span>
+              <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+            </a>
+          </div>
+
+          <!-- Feed Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+            <!-- Live Card 1 -->
+            <div class="group bg-surface-container-low rounded-2xl overflow-hidden shadow-xl hover:shadow-[0_12px_32px_rgba(0,219,233,0.15)] transition-all duration-300 flex flex-col cursor-pointer">
+              <div class="relative w-full h-44 overflow-hidden">
+                <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAQyuV9XoMINj-tmFmev635MLu5978zQ-2vMrvuECbzv0W2I6Zgde4OQ-5iQZDYajuP9YG6OR4wsVNIKZsAZ_g4HLZPCHdb6Uo0kRt6iOmSrutsCE1G2As5wua-ooFHGU62p4JPPSzQ254WTzckLZagLuDN5zwm_gqUhXrBuoL3-z8sokhR-rf-9KPFpmIKMjZcACFg3JHxwCb2io_jVUI05w5V4kUFe2RCqbyt_7w')"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-black/40"></div>
+                <div class="absolute top-3 left-3 flex items-center gap-1.5 px-2 py-0.5 rounded bg-primary-container text-on-surface font-label-xs text-label-xs font-bold uppercase tracking-wider shadow">
+                  <span class="w-1.5 h-1.5 rounded-full bg-on-surface animate-ping"></span>
+                  EN VIVO
+                </div>
+                <div class="absolute top-3 right-3 px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-on-surface font-label-xs text-label-xs flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[13px] text-primary">visibility</span>
+                  <span>48.2k</span>
+                </div>
+              </div>
+              <div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+                <div>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-1">
+                    Distrito 07: Cámaras de Tráfico Sintético
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-1">
+                    Monitoreo directo en tiempo real de cuadrantes prohibidos sin censura corporativa.
+                  </p>
+                </div>
+                <div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-xs text-label-xs">
+                  <span class="text-tertiary">Códec: AV1 • 120 FPS</span>
+                  <a href="index.html#catalogo" class="text-primary hover:underline font-bold">Ver en Tienda →</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Live Card 2 -->
+            <div class="group bg-surface-container-low rounded-2xl overflow-hidden shadow-xl hover:shadow-[0_12px_32px_rgba(255,74,141,0.15)] transition-all duration-300 flex flex-col cursor-pointer">
+              <div class="relative w-full h-44 overflow-hidden">
+                <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA9N84c8AzPk9ymJTOAI67Ex-qGRidgaun5j-MojAPFy04Amb8puyTN8aF4qMBRT0atZ6A-siIYCO_MsL3W0BNM_baD_DjjLDeAfrrJx9SktTW3HRS2hqxnk7kpfoGVdKRjxZmfybSYjxaOMd0Kl2jVVuSF5JA8QXDCiCBRz3aTs20ejh96DTiYKkGb1zxfWugTKMs3ByuaY4X-fqbi04vaEtcVH7FHh-oj18Ol_3I')"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-black/40"></div>
+                <div class="absolute top-3 left-3 flex items-center gap-1.5 px-2 py-0.5 rounded bg-primary-container text-on-surface font-label-xs text-label-xs font-bold uppercase tracking-wider shadow">
+                  <span class="w-1.5 h-1.5 rounded-full bg-on-surface animate-ping"></span>
+                  EN VIVO
+                </div>
+                <div class="absolute top-3 right-3 px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-on-surface font-label-xs text-label-xs flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[13px] text-primary">visibility</span>
+                  <span>112.5k</span>
+                </div>
+              </div>
+              <div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+                <div>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-1">
+                    Finales Mayores Netrunner: Sector Cero
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-1">
+                    La confrontación de ciberdeportistas renegados más grande del año con audio espacial.
+                  </p>
+                </div>
+                <div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-xs text-label-xs">
+                  <span class="text-tertiary">Códec: HEVC • 4K Real</span>
+                  <a href="index.html#catalogo" class="text-primary hover:underline font-bold">Ver en Tienda →</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Live Card 3 -->
+            <div class="group bg-surface-container-low rounded-2xl overflow-hidden shadow-xl hover:shadow-[0_12px_32px_rgba(219,184,255,0.15)] transition-all duration-300 flex flex-col cursor-pointer">
+              <div class="relative w-full h-44 overflow-hidden">
+                <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBGBbqNr8Fypb9AxRxITTx4qjO16kbAyxeP--unDv2d4zhRL4I2HBKmtaF974DD6-McVR7ACNnEmHiqMzKr18mNRP4_eI0bnIG5Aq5gI2In9qhtnA1H-3X09n2qK3CG0rxgVnyPKwZ8Xz2HgiqXNrlX9Ods24Cg46gyTf1l_xaE_9MN7ErHA-ic5Jexd6JvJc06VDwQEQmhf4llpo585nTWjBc4vubFeX4aq5pBsWo')"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-black/40"></div>
+                <div class="absolute top-3 left-3 flex items-center gap-1.5 px-2 py-0.5 rounded bg-primary-container text-on-surface font-label-xs text-label-xs font-bold uppercase tracking-wider shadow">
+                  <span class="w-1.5 h-1.5 rounded-full bg-on-surface animate-ping"></span>
+                  EN VIVO
+                </div>
+                <div class="absolute top-3 right-3 px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-on-surface font-label-xs text-label-xs flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[13px] text-primary">visibility</span>
+                  <span>29.4k</span>
+                </div>
+              </div>
+              <div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+                <div>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-1">
+                    Bóveda Sintetizador Kavinsky: Sesión en Vivo
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-1">
+                    Sesión sin pérdidas FLAC 24-bit transmitida desde el búnker subterráneo de Berlín.
+                  </p>
+                </div>
+                <div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-xs text-label-xs">
+                  <span class="text-tertiary">Códec: FLAC 96kHz</span>
+                  <a href="index.html#catalogo" class="text-primary hover:underline font-bold">Ver en Tienda →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ROW 2: BLINDADOS & RECOMENDADOS -->
+        <section class="flex flex-col gap-space-md">
+          <div class="flex items-center justify-between">
+            <div>
+              <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Estrenos Blindados & Recomendados</h2>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">Contenido 100% desbloqueado por tu suscripción Núcleo Búnker VIP</p>
+            </div>
+            <a href="index.html#catalogo" class="text-primary text-xs font-bold hover:underline">
+              Comprar Pantalla o Cuenta Completa →
+            </a>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-space-md">
+            <!-- Poster 1 -->
+            <a href="index.html#catalogo" class="group relative flex flex-col bg-surface-container-low rounded-2xl overflow-hidden cursor-pointer shadow-lg hover:shadow-[0_16px_36px_rgba(255,74,141,0.2)] transition-all duration-300">
+              <div class="relative w-full aspect-[2/3] overflow-hidden">
+                <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDo9Gk1dAGu0gU7prm_qnzbMhb-CIHB6mi8uv3ILMzkZ4lH2qNDiCWARNtILaZO5d3wHmvFoFf8Ix4th5YJ7ap5OL2diXh-BTKtJGVDH1adX8vh4kFdxRyveLumYcwoKHIIT4QPnI_928-DpTA3tpIPZ3oaCSdoNkvo7wLPYRBl7jSsKbcDjpZNm-lboJFgtcTciRlbOY9KS3izC6PI8rCgwCHNVQsbVEurddVcQrg')"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-black/30"></div>
+                <div class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-tertiary font-label-xs text-label-xs font-semibold">4K HDR</div>
+                <div class="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-primary font-label-xs text-label-xs flex items-center gap-0.5">
+                  <span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span>9.8</span>
+                </div>
+              </div>
+              <div class="p-space-sm flex flex-col gap-1">
+                <h4 class="font-headline-sm text-[16px] leading-5 text-on-surface group-hover:text-primary transition-colors line-clamp-1">Sintética: Consciencia Cero</h4>
+                <div class="flex items-center justify-between text-outline font-label-xs text-label-xs">
+                  <span>Película • 1h 54m</span>
+                  <span>Dolby Vision</span>
+                </div>
+              </div>
+            </a>
+
+            <!-- Poster 2 -->
+            <a href="index.html#catalogo" class="group relative flex flex-col bg-surface-container-low rounded-2xl overflow-hidden cursor-pointer shadow-lg hover:shadow-[0_16px_36px_rgba(0,219,233,0.2)] transition-all duration-300">
+              <div class="relative w-full aspect-[2/3] overflow-hidden">
+                <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAxDj5C4birYRN9KkO2jEvHjoX61-CRnqSLKRsLACS-Fo0sdYE8yeRZ-WtFXvB0acfYQsql6crSu_ymXuz25m48pbpqZCQEUlz5N_prtmbThlGR3FWGBoiCw0LyaBo1l3xuc1g_2zgi6TgpyEhaeyjkQjs30jnWLdNE4a5rh7oMVszzDXV4VFb_0MRHh1MmzI3ucJXJd4UNcnYhfYAGr4Lcgn5-gLnIprhmtj8BzkA')"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-black/30"></div>
+                <div class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-secondary font-label-xs text-label-xs font-semibold">IMAX MEJORADO</div>
+                <div class="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-primary font-label-xs text-label-xs flex items-center gap-0.5">
+                  <span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span>9.6</span>
+                </div>
+              </div>
+              <div class="p-space-sm flex flex-col gap-1">
+                <h4 class="font-headline-sm text-[16px] leading-5 text-on-surface group-hover:text-tertiary transition-colors line-clamp-1">Protocolo Ciber-Búnker</h4>
+                <div class="flex items-center justify-between text-outline font-label-xs text-label-xs">
+                  <span>Película • 2h 10m</span>
+                  <span>Atmos 7.1</span>
+                </div>
+              </div>
+            </a>
+
+            <!-- Poster 3 -->
+            <a href="index.html#catalogo" class="group relative flex flex-col bg-surface-container-low rounded-2xl overflow-hidden cursor-pointer shadow-lg hover:shadow-[0_16px_36px_rgba(219,184,255,0.2)] transition-all duration-300">
+              <div class="relative w-full aspect-[2/3] overflow-hidden">
+                <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAvzau7sb7joNFdcBGNN6EalDuBYkUAdqixmkBTHCCWNmBrqKGQlpkkxZQJ4JzZHLfefzefPUDh_Od0-piWxB_tog6ClhyOfDeAP7N0NHHc5I-ieriKgFtso1OpSvmom0OUx3dFiqPd0sApCqrbUaZTNITP3Tw--IRDDIH6aGU23AGRSB2vtZJFE-0YI-qSa4Ppq2BrPQSSYISIvfBRFPSCWjxGpVhw0-L8UxXKnyg')"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-black/30"></div>
+                <div class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-tertiary font-label-xs text-label-xs font-semibold">MÁSTER 8K</div>
+                <div class="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-primary font-label-xs text-label-xs flex items-center gap-0.5">
+                  <span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span>9.7</span>
+                </div>
+              </div>
+              <div class="p-space-sm flex flex-col gap-1">
+                <h4 class="font-headline-sm text-[16px] leading-5 text-on-surface group-hover:text-secondary transition-colors line-clamp-1">El Código del Arquitecto</h4>
+                <div class="flex items-center justify-between text-outline font-label-xs text-label-xs">
+                  <span>Documental • 1h 42m</span>
+                  <span>AV1 Puro</span>
+                </div>
+              </div>
+            </a>
+
+            <!-- Poster 4 -->
+            <a href="index.html#catalogo" class="group relative flex flex-col bg-surface-container-low rounded-2xl overflow-hidden cursor-pointer shadow-lg hover:shadow-[0_16px_36px_rgba(255,74,141,0.2)] transition-all duration-300">
+              <div class="relative w-full aspect-[2/3] overflow-hidden">
+                <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDqfJNZkfJFFtP00UsLkxZcRwmmSTuYqwjzqU4BM3TVvfZG3t9IYGKP9h6_GBeW8gIjy0xbsKzBKPBxBEvArURNdYwN-HTQTOAe6ygR7hJZWA2r-L8KaF_sQkTsocf2nlEsZaOWg83EGXPBl6JYCtBF7MU1B6USKDkmfNcQ4N1J5z85fEpaKXUyg4h8Oz64lPh6S2bWrQGPISH5TaGku42d2zhnbH1gvtkciNRo94U')"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-black/30"></div>
+                <div class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-primary font-label-xs text-label-xs font-semibold">EXCLUSIVO VIP</div>
+                <div class="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-primary font-label-xs text-label-xs flex items-center gap-0.5">
+                  <span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span>9.5</span>
+                </div>
+              </div>
+              <div class="p-space-sm flex flex-col gap-1">
+                <h4 class="font-headline-sm text-[16px] leading-5 text-on-surface group-hover:text-primary transition-colors line-clamp-1">Metrópolis 2140: Apagón</h4>
+                <div class="flex items-center justify-between text-outline font-label-xs text-label-xs">
+                  <span>Película • 2h 28m</span>
+                  <span>HDR10+</span>
+                </div>
+              </div>
+            </a>
+
+            <!-- Poster 5 -->
+            <a href="index.html#catalogo" class="group relative flex flex-col bg-surface-container-low rounded-2xl overflow-hidden cursor-pointer shadow-lg hover:shadow-[0_16px_36px_rgba(0,219,233,0.2)] transition-all duration-300 hidden lg:flex">
+              <div class="relative w-full aspect-[2/3] overflow-hidden">
+                <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAqMgBrilgrfCasZIgKHXSdhnxDK9zYhrvzlm3eIRX1FDgpEhajCTOTC4wTXmyxYIIK6waYEtbKz2WbgJnDVtcOUNgMTgYC_BnCP6RLj6YhWZh10iacxZ4noDReIsMPfxZfq_1JpP7L-trmAQfsNM24k277LpOHnbG8AMs-QTnE0LNDuYNQWdF49HTrARz48Iojob3yxP_NHZ6xpSj-JEUz4WUHrnMRtVaES0g-26s')"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-black/30"></div>
+                <div class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-tertiary font-label-xs text-label-xs font-semibold">4K 60FPS</div>
+                <div class="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-primary font-label-xs text-label-xs flex items-center gap-0.5">
+                  <span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span>9.9</span>
+                </div>
+              </div>
+              <div class="p-space-sm flex flex-col gap-1">
+                <h4 class="font-headline-sm text-[16px] leading-5 text-on-surface group-hover:text-tertiary transition-colors line-clamp-1">Génesis de Bio-Hackeo</h4>
+                <div class="flex items-center justify-between text-outline font-label-xs text-label-xs">
+                  <span>Docu-Serie • 6 Ep.</span>
+                  <span>Dolby Vision</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <!-- 4. SYSTEM TELEMETRY -->
+        <section class="w-full bg-surface-container-low/90 backdrop-blur-xl rounded-2xl p-space-md shadow-2xl">
+          <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-md">
+            <div class="flex items-center gap-space-md">
+              <div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-tertiary">
+                <span class="material-symbols-outlined text-[28px] animate-pulse">radar</span>
+              </div>
+              <div class="flex flex-col">
+                <div class="flex items-center gap-2">
+                  <span class="font-headline-sm text-headline-sm text-on-surface">Telemetría de Red del Búnker</span>
+                  <span class="px-2 py-0.5 rounded bg-tertiary/10 text-tertiary font-label-xs text-label-xs font-semibold">ENLACE ÓPTICO CUÁNTICO ACTIVO</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Nodo de Enrutamiento Primario: <strong class="text-on-surface">BUNKER-MADRID-01 (AS20492)</strong></p>
+              </div>
+            </div>
+
+            <!-- Telemetry Key Metrics -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-space-md w-full lg:w-auto">
+              <div class="bg-surface-container-lowest px-space-md py-space-sm rounded-xl flex flex-col">
+                <span class="font-label-xs text-label-xs text-outline uppercase tracking-wider">Tasa de Bits</span>
+                <div class="flex items-baseline gap-1 mt-0.5">
+                  <span class="font-headline-sm text-headline-sm text-primary font-mono font-bold">88.4</span>
+                  <span class="font-label-xs text-label-xs text-on-surface-variant">Mbps</span>
+                </div>
+              </div>
+              <div class="bg-surface-container-lowest px-space-md py-space-sm rounded-xl flex flex-col">
+                <span class="font-label-xs text-label-xs text-outline uppercase tracking-wider">Pérdida de Paquetes</span>
+                <div class="flex items-baseline gap-1 mt-0.5">
+                  <span class="font-headline-sm text-headline-sm text-tertiary font-mono font-bold">0.00%</span>
+                </div>
+              </div>
+              <div class="bg-surface-container-lowest px-space-md py-space-sm rounded-xl flex flex-col">
+                <span class="font-label-xs text-label-xs text-outline uppercase tracking-wider">Túnel Cifrado</span>
+                <div class="flex items-baseline gap-1 mt-0.5">
+                  <span class="font-headline-sm text-headline-sm text-secondary font-mono font-bold">AES-256</span>
+                </div>
+              </div>
+              <div class="bg-surface-container-lowest px-space-md py-space-sm rounded-xl flex flex-col">
+                <span class="font-label-xs text-label-xs text-outline uppercase tracking-wider">Búfer de Caché</span>
+                <div class="flex items-baseline gap-1 mt-0.5">
+                  <span class="font-headline-sm text-headline-sm text-on-surface font-mono font-bold">98.2%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="w-full bg-surface-container-lowest py-space-lg">
+    <div class="w-full px-gutter flex flex-col md:flex-row items-center justify-between gap-space-md">
+      <div class="flex flex-col sm:flex-row items-center gap-space-sm text-center sm:text-left">
+        <p class="font-body-sm text-body-sm text-on-surface-variant">© 2026 HN Codenest Solution - Todos los derechos reservados</p>
+        <span class="hidden sm:inline text-outline-variant">•</span>
+        <span class="font-label-xs text-label-xs text-tertiary">Encriptación AES-256 Activa</span>
+      </div>
+      <nav class="flex items-center flex-wrap justify-center gap-space-md">
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-tertiary transition-colors" href="index.html#garantia">Términos de Servicio</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-tertiary transition-colors" href="index.html#garantia">Privacidad Blindada</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-tertiary transition-colors" href="index.html#faq">Centro de Ayuda</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-tertiary transition-colors" href="index.html#catalogo">Comprar Cuentas</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
